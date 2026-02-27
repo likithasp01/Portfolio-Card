@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body{
+            background-color: rgb(136, 98, 48);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100hv;
+        }
+        .card{
+            width: 300px;
+            height: 450px;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0e1ce;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgb(21, 8, 8);
+            animation: fadeln 1s ease forwards;
+        }
+        .photo{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 15px;
+            object-fit: cover;
+            animation: popln 1s ease forwards;
+            box-shadow: 0 2px 5px rgb(21, 8, 8);
+        }
+        .card h2{
+            margin: 15px 0px 5px 0px;
+            font-size: 25px;
+            color: rgb(85, 37, 3);
+        }
+        .card h4{
+            margin: 0px 0px 15px 0px;
+            color: rgb(191, 92, 5);
+        }
+        .card p{
+            font-size: 15px;
+            color: rgb(109, 34, 5);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .skills{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .skills span{
+            background-color: rgb(164, 95, 5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 13px;
+            transition: transform 1s,background-color 0.3s;
+            cursor: default;
+        }
+        .skills span:hover{
+            transform: scale(1.1);
+            background-color: rgb(70, 56, 38);
+        }
+        .btns{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .btns button{
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 1s,background-color 0.3s;
+        }
+        .btn-contact, .btn-cv{
+            background-color: rgb(74, 32, 0);
+            color: white;
+        }
+        .btn-contact{
+            background-color: rgb(145, 69, 11);
+            color: white;
+        }
+        .btn-contact:hover{
+            background-color: rgb(95, 115, 76);
+            transform: scale(1.1);
+        }
+        .btn-cv:hover{
+            background-color: rgb(95, 116, 74);
+            transform: scale(1.1);
+        }
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: rgb(94, 13, 13);
+        }
+        @keyframes fadeln{
+            from{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes popln {
+            from{
+                transform: scale(0.5);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="./likithaa.jpg" class="photo">
+        <h2>Likitha S P</h2>
+        <h4>Information Science and Engineering</h4>
+        <p>I'm an ISE student from MIT Mysore, pursuing my graduation. And currently focusing on solving real world problems and interested in building dynamic interactive websites.</p>
+        <div class="skills">
+            <span>Python Programming</span>
+            <span>Java</span>
+            <span>AI/ML</span>
+            <span>SQL</span>
+            <span>Web Development</span>
+        </div><br>
+    <div class="btns">
+        <button class="btn-contact" id="contact">Contact Me</button>
+        <button class="btn-cv" id="cv">Download CV</button>
+    </div><br>
+    <div class="footer">
+        <span>Location: Bengaluru</span>
+        <span>Experience: Fresher</span>
+    </div>
+    </div>
+
+
+
+<script>
+    let msg=document.getElementById("contact");
+    msg.addEventListener("click",function(){
+        alert("2345678909, likitha@gmail.com");
+    });
+
+    let msgg=document.getElementById("cv");
+    msgg.addEventListener("click",function(){
+        alert("2345678909, likitha@gmail.com");
+    });
+</script>
+</body>
+</html>
